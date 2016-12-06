@@ -45,4 +45,43 @@ public class listadupla<T> {
         return (primeiro == null);
     }
 
+    public void displayList() {
+        Node current = primeiro;
+        while (current != null) {
+            current.displayNode();
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public void removeprimeiro() {
+        if (!isEmpty()) {
+            Node temp = primeiro;
+
+            if (primeiro.next == null) {
+            	primeiro = null;
+                ultimo = null;
+            } else {
+            	primeiro = primeiro.next;
+            	primeiro.prev = null;
+            }
+            System.out.println(temp.toString() + " extrai da lista");
+        }
+    }
+
+    public void removeultimo() {
+        Node temp = ultimo;
+
+        if (!isEmpty()) {
+
+            if (primeiro.next == null) {
+            	primeiro = null;
+                ultimo = null;
+            } else {
+                ultimo = ultimo.prev;
+                ultimo.next = null;
+            }
+        }
+        System.out.println(temp.toString() + " que resta na lista");
+    }
 }

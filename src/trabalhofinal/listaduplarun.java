@@ -8,5 +8,14 @@ public class listaduplarun {
         newList.addPrimeiro(40);
         newList.addPrimeiro(60);
         newList.addPrimeiro(10);
-  }
+        newList.addPrimeiro(30);
+        newList.addPrimeiro(80);
+        newList.addPrimeiro(90);
+        newList.displayList();
+        newList.removeprimeiro();
+        newList.removeprimeiro();
+        newList.removeultimo();
+
+        newList.displayList();
+    }
 }
